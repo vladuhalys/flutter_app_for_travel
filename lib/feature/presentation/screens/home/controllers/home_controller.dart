@@ -6,6 +6,8 @@ class HomeController extends GetxController {
     'Most Viewed': true,
     'Nearby': false,
     'Latest': false,
+    'Popular': false,
+    'Most Searched Places': false,
   }.obs;
 
   void changeButtonState(String key) {

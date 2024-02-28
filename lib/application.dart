@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_for_travel/bindings.dart';
 import 'package:flutter_app_for_travel/core/router/router.dart';
 import 'package:flutter_app_for_travel/feature/presentation/screens/about/about_screen.dart';
 import 'package:flutter_app_for_travel/feature/presentation/screens/home/home_screen.dart';
@@ -17,6 +18,7 @@ class Application extends StatelessWidget {
           primarySwatch: Colors.blue,
           useMaterial3: true,
         ),
+        initialBinding: AppBindings(),
         initialRoute: AppRouter.splash,
         getPages: [
           GetPage(name: AppRouter.splash, page: () => const SplashScreen()),
