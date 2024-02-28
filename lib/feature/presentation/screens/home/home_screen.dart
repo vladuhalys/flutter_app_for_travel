@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app_for_travel/core/consts/consts.dart';
 import 'package:flutter_app_for_travel/core/theme/app_colors/app_colors.dart';
 import 'package:flutter_app_for_travel/core/theme/app_text_style/app_text_style.dart';
+import 'package:flutter_app_for_travel/feature/data/local/local_data.dart';
 import 'package:flutter_app_for_travel/feature/presentation/screens/home/controllers/home_controller.dart';
+import 'package:flutter_app_for_travel/feature/presentation/screens/home/home_card_list.dart';
 import 'package:flutter_app_for_travel/feature/presentation/screens/home/home_custom_app_bar.dart';
 import 'package:flutter_app_for_travel/feature/presentation/screens/home/home_scroll_buttons.dart';
 import 'package:flutter_app_for_travel/feature/presentation/widgets/app_bottom_bar.dart';
@@ -89,6 +91,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 const SizedBox(height: AppConsts.paddingHeightMedium),
                 const HomeScrollButtons(),
+                const SizedBox(height: AppConsts.paddingHeightMedium),
+                HomeCardList(places: LocalData.places),
               ],
             ),
           ),
